@@ -1,0 +1,15 @@
+C:\Users\p_jos\source\repos\PracticaEnVivo\CarInfo.Infraestructure\bin\Debug\net5.0\CarInfo.Infraestructure.deps.json
+C:\Users\p_jos\source\repos\PracticaEnVivo\CarInfo.Infraestructure\bin\Debug\net5.0\CarInfo.Infraestructure.runtimeconfig.json
+C:\Users\p_jos\source\repos\PracticaEnVivo\CarInfo.Infraestructure\bin\Debug\net5.0\CarInfo.Infraestructure.runtimeconfig.dev.json
+C:\Users\p_jos\source\repos\PracticaEnVivo\CarInfo.Infraestructure\bin\Debug\net5.0\CarInfo.Infraestructure.dll
+C:\Users\p_jos\source\repos\PracticaEnVivo\CarInfo.Infraestructure\bin\Debug\net5.0\ref\CarInfo.Infraestructure.dll
+C:\Users\p_jos\source\repos\PracticaEnVivo\CarInfo.Infraestructure\bin\Debug\net5.0\CarInfo.Infraestructure.pdb
+C:\Users\p_jos\source\repos\PracticaEnVivo\CarInfo.Infraestructure\obj\Debug\net5.0\CarInfo.Infraestructure.csproj.AssemblyReference.cache
+C:\Users\p_jos\source\repos\PracticaEnVivo\CarInfo.Infraestructure\obj\Debug\net5.0\CarInfo.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\p_jos\source\repos\PracticaEnVivo\CarInfo.Infraestructure\obj\Debug\net5.0\CarInfo.Infraestructure.AssemblyInfoInputs.cache
+C:\Users\p_jos\source\repos\PracticaEnVivo\CarInfo.Infraestructure\obj\Debug\net5.0\CarInfo.Infraestructure.AssemblyInfo.cs
+C:\Users\p_jos\source\repos\PracticaEnVivo\CarInfo.Infraestructure\obj\Debug\net5.0\CarInfo.Infraestructure.csproj.CoreCompileInputs.cache
+C:\Users\p_jos\source\repos\PracticaEnVivo\CarInfo.Infraestructure\obj\Debug\net5.0\CarInfo.Infraestructure.dll
+C:\Users\p_jos\source\repos\PracticaEnVivo\CarInfo.Infraestructure\obj\Debug\net5.0\ref\CarInfo.Infraestructure.dll
+C:\Users\p_jos\source\repos\PracticaEnVivo\CarInfo.Infraestructure\obj\Debug\net5.0\CarInfo.Infraestructure.pdb
+C:\Users\p_jos\source\repos\PracticaEnVivo\CarInfo.Infraestructure\obj\Debug\net5.0\CarInfo.Infraestructure.genruntimeconfig.cache

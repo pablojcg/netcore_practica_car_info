@@ -1,0 +1,38 @@
+version: '3.5'
+ 
+services:
+  test-mti-pg-keycloak:
+    container_name: test-mti-pg-keycloak
+    image: postgres:latest
+    restart: always
+    hostname: test-mti-pg-keycloak
+    networks:
+      - mti-backend
+    environment:
+      POSTGRES_DB: keycloak
+      POSTGRES_USER: keycloak
+      POSTGRES_PASSWORD: k3ycl04kmt1
+    ports:
+      - 5460:5432
+ 
+  test-mti-pg-micro:
+    container_name: test-mti-pg-micro
+    image: postgres:latest
+    restart: always
+    hostname: test-mti-pg-micro
+    networks:
+      - mti-backend
+    environment:
+      POSTGRES_DB: micro
+      POSTGRES_USER: micro
+      POSTGRES_PASSWORD: M1cr0DB
+    ports:
+      - 5470:5432
+  
+networks:
+  mti-web:
+    name: mti-web
+    external: false
+  mti-backend:
+    name: mti-backend
+    external: false   

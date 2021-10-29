@@ -1,0 +1,22 @@
+version: '3.5'
+
+volumes:
+  flask-db:
+
+services:
+  ms-car-info:
+    container_name: ms-car-info
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always    
+    hostname: ms-car-info
+    ports:
+      - 8078:80
+    environment:
+      USERDB: postgres
+      PASSWORDDB: pablojjcg23
+      HOSTDB: 172.17.0.1
+      PORTDB: 5432
+      DATABSENAME: CarsInfDataBase
+

@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+  ms-car-info:
+    container_name: ms-car-info
+    build: .
+    hostname: microservicecarinfo
+    restart: always
+    networks:
+      - backend
+    ports:
+      - "49157:49157"
+
+networks:
+  backend:
+    name: backend
+    external: false  

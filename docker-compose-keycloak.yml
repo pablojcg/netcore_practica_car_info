@@ -1,0 +1,68 @@
+version: '3.5'
+ 
+services:
+  test-mti-pg-keycloak:
+    container_name: test-mti-pg-keycloak
+    image: postgres:latest
+    restart: always
+    hostname: test-mti-pg-keycloak
+    networks:
+      - mti-backend
+    environment:
+      POSTGRES_DB: keycloak
+      POSTGRES_USER: keycloak
+      POSTGRES_PASSWORD: k3ycl04kmt1
+    ports:
+      - 5460:5432
+ 
+  test-mti-pg-micro:
+    container_name: test-mti-pg-micro
+    image: postgres:latest
+    restart: always
+    hostname: test-mti-pg-micro
+    networks:
+      - mti-backend
+    environment:
+      POSTGRES_DB: micro
+      POSTGRES_USER: micro
+      POSTGRES_PASSWORD: M1cr0DB
+    ports:
+      - 5470:5432
+ 
+  test-mti-server-keycloak:
+    container_name: test-mti-server-keycloak
+    image: jboss/keycloak
+    restart: always    
+    hostname: mti-sv-keycloak
+    networks:
+      - mti-web
+      - mti-backend
+    environment:
+      DB_VENDOR: POSTGRES
+      DB_ADDR: test-mti-pg-keycloak
+      DB_DATABASE: keycloak
+      DB_USER: keycloak
+      DB_SCHEMA: public
+      DB_PASSWORD: k3ycl04kmt1
+      DB_PORT: 5432
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: 4dm1nk3ycl04k
+      PROXY_ADDRESS_FORWARDING: "true"
+      # Uncomment the line below if you want to specify JDBC parameters. The parameter below is just an example, and it shouldn't be used in production without knowledge. It is highly recommended that you read the PostgreSQL JDBC driver documentation in order to use it.
+      #JDBC_PARAMS: "ssl=true"
+    volumes:
+      - ./ms-keycloak-themes/base:/opt/jboss/keycloak/themes/base
+      - ./ms-keycloak-themes/MTI-Theme:/opt/jboss/keycloak/themes/MTI-Theme
+      - ./ms-keycloak-themes/Banco-Theme:/opt/jboss/keycloak/themes/Banco-Theme
+    ports:
+      - 8080:8080
+    depends_on:
+      - test-mti-pg-keycloak        
+  
+networks:
+  mti-web:
+    name: mti-web
+    external: false
+  mti-backend:
+    name: mti-backend
+    external: false   
